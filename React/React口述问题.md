@@ -96,3 +96,6 @@ handleClick = () => {
    1. 如果父组件的 props 与 state 没有发生改变时，子组件不会重新 render
    2. 如果子组件使用了 PureComponent，shouldComponentUpdate，React.memo 这些方式来来优化了 render 方式，那么子组件也不会重新 render
    3. 使用 props.children 传递无状态组件， 父组件传递 props 时，对于引用类型传递的是地址，执行父组件的 render 时，若 props.children 的引用地址没变化，则子组件不会重新渲染
+5. ### usememo，useeffect，useCallback，uselayouteffect 区别
+
+6. ### React 的 Fiber 架构是什么

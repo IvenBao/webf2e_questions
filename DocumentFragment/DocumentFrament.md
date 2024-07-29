@@ -50,7 +50,9 @@ for (let i = 0; i <= 100; i++) {
 // 使用DocumentFragment
 const fragment = document.createDocumentFragment();
 for (let i = 0; i <= 100; i++) {
-  fragment.innerHTML += `<div>${i}</div>`; // 这里不会使DOM树重排，只会把这些内容记录在文档片段对象中，最多就只是占用一点内存，不会造成浏览器渲染线程的阻塞
+  const div = document.createElement("div");
+  div.innerHTML = i;
+  fragment.appendChild(div); // 这里不会使DOM树重排，只会把这些内容记录在文档片段对象中，最多就只是占用一点内存，不会造成浏览器渲染线程的阻塞
 }
 document.body.appendChild(fragment); // 操作一遍DOM树
 ```

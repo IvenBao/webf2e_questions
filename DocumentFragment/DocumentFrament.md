@@ -1,5 +1,7 @@
 # 文档片段 DocumentFragment
 
+文档片段是轻量级的 document 对象，主要是用来存储临时的节点信息，然后再一次性把文档片段中的内容渲染到 DOM 树上
+
 了解 <b>文档片段 DocumentFragment</b> 前，我们先知道 什么是 <b>文档对象 document object</b>
 
 ## 什么是 文档对象
